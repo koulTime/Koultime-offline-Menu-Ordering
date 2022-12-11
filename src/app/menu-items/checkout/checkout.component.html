@@ -1,0 +1,25 @@
+<div class="container">
+    <div *ngIf="!submitted" class="form">
+        <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Name</mat-label>
+            <input matInput type="text">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Payment Option</mat-label>
+            <mat-select>
+                <mat-option value="one">Cash</mat-option>
+                <mat-option value="two">Restaurant Ticket</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <div>
+            <button (click)="submitted=true" class="full-width" mat-raised-button color="primary">Place your
+                order</button>
+        </div>
+    </div>
+    <ng-container *ngIf="submitted">
+        <div class="thankyou">
+            <h1>Thank You for placing the order!</h1>
+            <img src="https://www.freeiconspng.com/uploads/checkmark-png-16.png" width="150px" alt="">
+        </div>
+    </ng-container>
+</div>

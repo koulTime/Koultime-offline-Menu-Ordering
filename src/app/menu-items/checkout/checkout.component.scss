@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    justify-content: center;
+
+    .form {
+        border: 1px solid lightgray;
+        padding: 30px;
+        margin-top: 10%;
+        max-width: 20%;
+        border-radius: 12px;
+    }
+    .thankyou {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10%;
+    }
+}

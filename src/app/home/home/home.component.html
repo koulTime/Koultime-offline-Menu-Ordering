@@ -1,0 +1,31 @@
+<div class="container">
+    <div *ngFor="let item of items" class="card">
+        <div class="img-sec">
+            <h2>{{item?.name}}</h2>
+            <img [src]="item?.imageUrl" [alt]="item?.name" [title]="item?.name">
+        </div>
+        <div class="card-content">
+            <div>
+                <span><b>Price:</b> {{item?.price | currency : 'USD'}}</span>
+            </div>
+
+            <div>
+                <span><b>Description:</b> {{item?.description}}</span>
+            </div>
+            <div>
+                <span><b>Category :</b> {{item?.category}}</span>
+            </div>
+            <div>
+                <span><b>Rate :</b> {{item?.rate}}</span>
+            </div>
+            <div>
+                <h3 *ngIf="item?.available" class="availble">Available</h3>
+                <h3 *ngIf="!item?.available" class="not-availble">Not Available</h3>
+            </div>
+            <div>
+                <button mat-raised-button color="primary" class="full-width" (click)="viewItemDetails(item)">View
+                    Details</button>
+            </div>
+        </div>
+    </div>
+</div>

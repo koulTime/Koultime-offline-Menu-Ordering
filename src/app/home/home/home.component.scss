@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .card {
+        border: 1px solid lightgray;
+        padding: 0px 0px 10px 0px;
+        max-width: 20%;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 10px;
+        width: 300px;
+        min-width: 300px;
+
+        h2 {
+            text-align: center;
+            background-color: lightgray;
+            margin-bottom: 0;
+            border-radius: 12px 12px 0 0;
+        }
+        
+        .img-sec {
+            img {
+                width: 100%;
+                height: 200px;
+            }
+        }
+
+        .availble {
+            margin: 20px 0;
+            text-align: center;
+            background-color: lightgreen;
+        }
+
+        .not-availble {
+            margin: 20px 0;
+            text-align: center;
+            background-color: lightcoral;
+        }
+
+        .card-content {
+            margin: 15px 0;
+            padding: 12px;
+
+            div {
+                padding: 4px 0;
+            }
+        }
+    }
+}
